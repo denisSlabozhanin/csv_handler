@@ -1,0 +1,23 @@
+{
+  "table_header": [
+    "grade", "text", "from", "to"
+  ],
+  "accept_files": {
+    "pattern": "input\\.[a-zA-Z]{4}\\.csv$"
+  },
+  "transform_column": {
+    "grade": {
+      "M": 1,
+      "F": 2
+    }
+  },
+  "add_column": {
+    "column_name": "diff",
+    "rule": "from:time - to:time"
+  },
+  "column_match": {
+    "grade": {
+      "pattern": "(M|F)"
+    }
+  }
+}
